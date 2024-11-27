@@ -23,7 +23,7 @@ const UpdateUser = () => {
 
   useEffect(() => {
     axios
-      .get(`https://ccprojectrepo-2.onrender.com/api/user/${id}`)
+      .get(`https://cc-lab-1.onrender.com/api/user/${id}`)
       .then((response) => {
         setUser(response.data);
       })
@@ -35,7 +35,7 @@ const UpdateUser = () => {
   const submitForm = async (e) => {
     e.preventDefault();
     await axios
-      .put(`https://ccprojectrepo-2.onrender.com/api/update/user/${id}`, user)
+      .put(`https://cc-lab-1.onrender.com/api/update/user/${id}`, user)
       .then((response) => {
         toast.success(response.data.message, { position: "top-right" });
         navigate("/");
